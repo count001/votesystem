@@ -1,0 +1,59 @@
+<body background="image.jpg">
+
+  <div align="center" class="box">
+    <form id="form"method="post" action="servlet/LoginServlet">
+        学号:<input type="text" value="" name="userName" id="userName"/><p/>
+        密码:<input type="password" value="" name="password" id="password"/><br/>
+        <p/>
+    </form>
+    <a class="btn_style" id="btn_login"href="javascript:login()" >登陆</a>
+    <a class="btn_style" id="btn_reset"href="javascript:reset()">重置</a>
+    <br/>
+  </div>
+  </body>
+  <script type="text/javascript">
+        function reset(){
+            document.getElementById("userName").value = "";
+            document.getElementById("password").value = "";
+            document.getElementById("error").innerHTML = "";
+        }
+        function login(){
+            document.getElementById('form').submit();
+        }
+    </script>
+    <style type="text/css">
+        .box{
+            width: 400px;
+            height: 300px;
+            margin:200 auto;
+            display:block;
+            position: relative;
+        }
+
+        .btn_style{
+            width: 100px;
+            height: 30px;
+            display: block;
+            position:absolute;
+
+            text-decoration:none;
+            text-align:center;
+            line-height:30px;
+
+            color: #fff;
+            background-color: #068;
+
+        }
+        #btn_reset:HOVER {
+            background-color: #087;
+        }
+        #btn_login:hover{
+            background-color: #087;
+        }
+        #btn_reset{
+            right:50px;
+        }
+        #btn_login{
+            margin-left: 50px;
+        }
+    </style>
