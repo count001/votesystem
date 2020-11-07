@@ -1,0 +1,61 @@
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ page  import="com.servlet.UserServlet" %>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页面</title>
+    <link href="regist.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 注册页面左图 -->
+        <div class="left"></div>
+        <!-- 注册栏 -->
+        <div class="right">
+            <div class="reg-label">
+                <label>用 户 注 册</label>
+                <hr>
+            </div>
+            <div class="reg-box">
+                <form action="<%=request.getContextPath()%>/servlet/UserServlet" id="formId" class="reg-form" method="POST">
+                    <div>
+                        <tr>
+                            <td><input type="text" name="Username" id="InputUsername" placeholder="用户名" οnblur="InputUsernameBlur()"></td>
+                            <td><label id="errorName"></label></td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><input type="password" name="Password" id="InputPassword" placeholder="密码" οnblur="InputPasswordBlur()"></td>
+                            <td><label id="errorPassword"></label></td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><input type="password" name="Repassword" id="InputRepassword" placeholder="姓名" οnblur="InputRepasswordBlur()"></td>
+                            <td><label id="errorRepassword"></label></td>
+                        </tr>
+                    </div>
+                    <!--<div>
+                        <tr>
+                            <td><input type="email" name="E-mail" id="InputEmail" placeholder="电子邮箱" οnblur="InputEmailBlur()"></td>
+                            <td><label id="errorEmail"></label></td>
+                        </tr>
+                    </div>-->
+                    <div class="reg-sub">
+                        <input id="submitButton" type="button" οnclick="checkForm()" value="免费注册">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom">
+            <label>© 福州大学数计学院 ｜ 计算机科学与技术 军舰队</label>
+        </div>
+    </div>
+    <!-- regist.js -->
+    <script type="text/javascript" charset="UTF-8" src="regist.js"></script>
+</body>
+</html>
