@@ -1,0 +1,73 @@
+
+<!--<%@page import="com.sun.xml.internal.txw2.Document"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>票数显示界面</title>
+</head>
+<body>
+<%
+int x1=0;
+int x2=0;
+int x3=0;
+int x4=0;
+int x5=0;
+int z1=0;
+int z2=0;
+int z3=0;
+int z4=0;
+int z5=0;
+%>
+<%
+String[] xy=request.getParameterValues("xy"); //用getParameterValues的方法，将核取到的值取到langtype[]阵列内  
+String[] zy=request.getParameterValues("zy");
+if (xy!=null)    
+//前端的使用者,如果没打勾的话    
+//request.getParameterValues("langtype")会接收到null值    
+{    
+    for(int i=0;i<xy.length;i++)
+    {
+         if(Integer.parseInt(xy[i])==1)
+            {x1++;}//xy[i]为字符串1
+          if(Integer.parseInt(xy[i])==2)
+            {x2++;}
+          if(Integer.parseInt(xy[i])==3)
+            {x3++;}
+         if(Integer.parseInt(xy[i])==4)
+            {x4++;}
+         if(Integer.parseInt(xy[i])==5)
+            {x5++;}
+      }
+}
+if (zy!=null)    
+    //前端的使用者,如果没打勾的话    
+    //request.getParameterValues("langtype")会接收到null值    
+    {    
+        for(int i=0;i<zy.length;i++)
+        {
+             if(Integer.parseInt(zy[i])==1)
+                {z1++;}//xy[i]为字符串1
+              if(Integer.parseInt(zy[i])==2)
+                {z2++;}
+              if(Integer.parseInt(zy[i])==3)
+                {z3++;}
+             if(Integer.parseInt(zy[i])==4)
+                {z4++;}
+             if(Integer.parseInt(zy[i])==5)
+                {z5++;}
+          }
+    }
+%>
+<h2>所支持的学院票数显示:</h2>
+信息学院:<%=x1%><br>
+经管学院:<%=x2%>        <br>
+交通学院:   <%=x3%> <br>
+林学院:<%=x4%>     <br>
+理学院: <%=x5%>        <br>
+
+
+</body>
+</html>

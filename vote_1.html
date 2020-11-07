@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>这是第一个投票</title>
+</head>
+<body>
+
+<table align="center" border="2" width="1000" height="400" >
+<form name="login"  action="http://localhost:8080/LYX/Vote.jsp" method="post">
+<h2 align=center>这个是软工实践投票： </h2>
+<tr bgcolor=#70DBDB>
+<td>请选择你认为作业较好的组:</td>
+<td>
+<input type="checkbox" name="xy" value=1 >第1组
+<input type="checkbox" name="xy" value=2 >第2组
+<input type="checkbox" name="xy" value=3 >第3组
+<input type="checkbox" name="xy" value=4 >第4组
+<input type="checkbox" name="xy" value=5 >第5组
+<input type="checkbox" name="xy" value=6 >第6组
+<input type="checkbox" name="xy" value=7 >第7组
+<input type="checkbox" name="xy" value=8 >第8组
+<input type="checkbox" name="xy" value=9 >第9组
+<input type="checkbox" name="xy" value=10 >第10组
+<input type="checkbox" name="xy" value=11 >第11组
+</td>
+</tr>
+<tr bgcolor=#70DBDB>
+<!--<td>请选择你所支持的专业:</td>
+<td>
+<input type="checkbox" name="zy" value=1 >计算机专业 
+<input type="checkbox" name="zy" value=2 >软件专业
+<input type="checkbox" name="zy" value=3 >信管专业
+<input type="checkbox" name="zy" value=4 >园林专业
+<input type="checkbox" name="zy" value=5 >土木专业
+</td>
+</tr>-->
+<td colspan="2" align="center">
+<input type="button" value="提交" onclick="submit()"> 
+<input type="reset" value="重置"></td>
+</form>
+</table>
+</body>
+</html>
